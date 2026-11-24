@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eventos Acadêmicos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Eventos Acadêmicos</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Cadastrar evento</h2>
+      <form id="form-evento">
+        <label for="titulo">Título *</label>
+        <input type="text" id="titulo" maxlength="150" required>
+
+        <label for="descricao">Descrição</label>
+        <textarea id="descricao" rows="3"></textarea>
+
+        <div class="linha">
+          <div>
+            <label for="data_evento">Data *</label>
+            <input type="date" id="data_evento" required>
+          </div>
+          <div>
+            <label for="local">Local *</label>
+            <input type="text" id="local" maxlength="100" required>
+          </div>
+        </div>
+
+        <button type="submit">Cadastrar</button>
+        <p id="mensagem"></p>
+      </form>
+    </section>
+
+    <section>
+      <h2>Eventos cadastrados</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Título</th>
+            <th>Descrição</th>
+            <th>Data</th>
+            <th>Local</th>
+          </tr>
+        </thead>
+        <tbody id="lista-eventos">
+          <tr><td colspan="5">Carregando...</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
